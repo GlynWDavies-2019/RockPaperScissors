@@ -2,8 +2,128 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Variables */
+
+:root {
+    /* Colors */
+    --dark-color: #333333;
+    --light-color: #F4F4F4;
+    --lose-color: #DC3545;
+    --primary-color: #003699;
+    --win-color: #28A745;
+    --white: #FFFFFF;
+    /* Modal */
+    --modal-duration: 1s;
+}
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Application Styles */
 
 body {
+    background-color: var(--white);
+    color: var(--dark-color);
     font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: hidden;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.restart-btn {
+    background: var(--light-color);
+    border: none;
+    color: var(--dark-color);
+    cursor: pointer;
+    display: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.4rem 1.3rem;
+}
+
+.restart-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.header {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 1rem;
+}
+
+.score {
+    display: grid;
+    font-size: 1.2rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.score p:first-child {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.score p:last-child {
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+.choices {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* Width: > 701px */
+
+.choice {
+    cursor: pointer;
+}
+
+/* -------------- */
+
+.choice:hover {
+    color: var(--primary-color);
+}
+
+.text-win {
+    color: var(--win-color);
+}
+
+.text-lose {
+    color: var(--lose-color);
+}
+
+/* Media Queries */
+
+/* Width: 501px - 700px */
+
+@media(max-width: 700px) {
+    .choice {
+        font-size: 110px;
+    }
+}
+
+/* Width: < 500px */
+
+@media(max-width: 500px) {
+    .choice {
+        font-size: 80px;
+    }
 }

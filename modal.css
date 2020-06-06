@@ -1,0 +1,43 @@
+/* Modal */
+
+.modal {
+    background: rgba(0,0,0,0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    animation-duration: 1s;
+    animation-name: modalopen;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    margin: 10% auto;
+    padding: 3rem;
+    text-align: center;
+    width: 350px;
+}
+
+.modal-content h1 {
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
