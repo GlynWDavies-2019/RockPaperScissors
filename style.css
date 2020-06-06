@@ -48,6 +48,7 @@ body {
     cursor: pointer;
     display: none;
     font-size: 1rem;
+    margin-bottom: 1rem;
     outline: none;
     padding: 0.4rem 1.3rem;
 }
